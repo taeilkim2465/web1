@@ -1,13 +1,13 @@
+<!--how to correctly make interactive action at night mode (border)-->
 <!doctype html>
 <html>
 <head>
     <title>WEB</title>
     <meta charset = "utf-8">
-    <link rel = "stylesheet" href = "style.css">
 </head>
 
 <body>
-    <h1><a href = "index.html" target = "_blank" class = "now">WEB</a></h1>
+    <h1 id = "boLine"><a href = "index.html" target = "_blank" class = "now">WEB</a></h1>
     <div id = "grid">
         <ol>
             <li><a href = "1.html" target = "_blank">HTML</a></li>
@@ -16,6 +16,43 @@
         </ol>
         <div id = "article">
             <h2>Welcome! WEB</h2>
+            <input type = "button" value = "night" onclick = "
+                var target = document.querySelector('body').style;
+                target.backgroundColor = 'black';
+                target.color = 'white';
+                document.querySelector('#boLine').style.borderBottom = '1px solid white';
+                document.querySelector('#article').style.borderLeft = '1px solid white';
+            ">
+            <input type = "button" value = "day" onclick = "
+                var target = document.querySelector('body').style;
+                target.backgroundColor = 'white';
+                target.color = 'black';
+                document.querySelector('#boLine').style.borderBottom = '1px solid black';
+                document.querySelector('#article').style.borderLeft = '1px solid black';
+            ">
+            <input type = "button" value = "night" onclick = "
+                var target = document.querySelector('body').style;
+                if(this.value === 'night'){ 
+                    target.backgroundColor = 'black';
+                    target.color = 'white';
+                    document.querySelector('#boLine').style.borderBottom = '1px solid white';
+                    document.querySelector('#article').style. borderLeft = '1px solid white';
+                    this.value = 'day';
+                }
+                else{
+                    target.backgroundColor = 'white';
+                    target.color = 'black';
+                    document.querySelector('#boLine').style.borderBottom = '1px solid black';
+                    document.querySelector('#article').style. borderLeft = '1px solid black';
+                    this.value = 'night';
+                }
+            ">
+            <script>
+                document.write("this sentence was written in javascript!");
+            </script>
+            <input type = "text" onchange = "alert('welcome to Taeil\'s web page!')">
+            <input type = "button" value = "HI" onclick = "alert('hi!')">
+            <br>
             <img src = "coding.jpg" width = "50%">
             <p><a href="https://ko.wikipedia.org/wiki/HTML" target = "_bank" title = "HTML">
                 월드 와이드 웹</a>(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 
@@ -27,6 +64,6 @@
             <p>인터넷에서 HTTP 프로토콜, 하이퍼텍스트, HTML형식 등을 사용하여 그림과 문자를 교환하는 전송방식을 말하기도 한다!</p>
         </div>
     </div>
-
+    <link rel = "stylesheet" href = "style.css">
 </body>
 </html>
