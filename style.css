@@ -4,6 +4,7 @@
 }
 a{
     text-decoration: none;
+    color: blue;
 }
 .now{
     color: red;
@@ -37,3 +38,4 @@ body{
     #article{
         border-left: none !important; 
     }
+}

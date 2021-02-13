@@ -4,6 +4,8 @@
 <head>
     <title>WEB</title>
     <meta charset = "utf-8">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "color.js"></script>
 </head>
 
 <body>
@@ -22,6 +24,14 @@
                 target.color = 'white';
                 document.querySelector('#boLine').style.borderBottom = '1px solid white';
                 document.querySelector('#article').style.borderLeft = '1px solid white';
+                var alist = document.querySelectorAll('a')
+                var i = 0;
+                while(i < alist.length){
+                    console.log(alist[i]);
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+
             ">
             <input type = "button" value = "day" onclick = "
                 var target = document.querySelector('body').style;
@@ -29,23 +39,16 @@
                 target.color = 'black';
                 document.querySelector('#boLine').style.borderBottom = '1px solid black';
                 document.querySelector('#article').style.borderLeft = '1px solid black';
+                var alist = document.querySelectorAll('a')
+                var i = 0;
+                while(i < alist.length){
+                    console.log(alist[i]);
+                    alist[i].style.color = 'blue';
+                    i++;
+                }
             ">
             <input type = "button" value = "night" onclick = "
-                var target = document.querySelector('body').style;
-                if(this.value === 'night'){ 
-                    target.backgroundColor = 'black';
-                    target.color = 'white';
-                    document.querySelector('#boLine').style.borderBottom = '1px solid white';
-                    document.querySelector('#article').style. borderLeft = '1px solid white';
-                    this.value = 'day';
-                }
-                else{
-                    target.backgroundColor = 'white';
-                    target.color = 'black';
-                    document.querySelector('#boLine').style.borderBottom = '1px solid black';
-                    document.querySelector('#article').style. borderLeft = '1px solid black';
-                    this.value = 'night';
-                }
+                nightDayHandler(this);
             ">
             <script>
                 document.write("this sentence was written in javascript!");

@@ -4,10 +4,11 @@
     <title>WEB</title>
     <meta charset = "utf-8">
     <link rel = "stylesheet" href = "style.css">
+    <script src = "color.js"></script>
 </head>
 
 <body>
-    <h1><a href = "index.html" target = "_blank">WEB</a></h1>
+    <h1 id = "boLine"><a href = "index.html" target = "_blank">WEB</a></h1>
     <div id = "grid">
         <ol>
             <li><a href = "1.html" target = "_blank">HTML</a></li>
@@ -16,6 +17,9 @@
         </ol>
         <div id = "article">
             <h2>CSS</h2>
+            <input type = "button" value = "night" onclick = "
+                nightDayHandler(this);
+            ">
             <img src = "css.png" width = "20%">
             <p><a href="https://ko.wikipedia.org/wiki/%EC%A2%85%EC%86%8D%ED%98%95_%EC%8B%9C%ED%8A%B8" target = "_bank" title = "HTML">
                 캐스케이딩 스타일 시트</a>(Cascading Style Sheets, CSS)는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로[1], 
